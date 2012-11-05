@@ -2,3 +2,4 @@
 
   * HomePage
   * ImageRegistration
+  * KineticsProcessing
