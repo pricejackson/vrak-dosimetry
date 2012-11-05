@@ -1,0 +1,10 @@
+#Overview of Kinetics Fitting
+
+= Introduction =
+
+VRAK imports serial functional images as matrices and iterates through image volumes voxel-by-voxel with a 2- or 3-phase exponential pharmacokinetic curve fitting routine. 
+
+
+= Details =
+
+# Images are decay-corrected to yield a measure of biological concentration (proportional to percent injected dose) per voxel. Decay correction factors must be supplied in the input text file [image time post-injection, physical half-life].
