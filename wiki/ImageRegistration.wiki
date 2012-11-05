@@ -60,3 +60,10 @@ mkdir SPECT2
 transformix -in SPECT2.dcm -tp CT2/TransformParameters.0.txt -out SPECT2/
 
 }}}
+
+
+output will be written to CT1/result.mhd, CT1/result.raw, etc. 
+If renaming, be sure to change the 'ElementDataFile' flag in the metafile:
+{{{
+ElementDataFile = newname.raw
+}}}
