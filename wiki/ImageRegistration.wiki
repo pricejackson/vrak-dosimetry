@@ -22,11 +22,11 @@ transformix -in moving_functional_image.dcm -tp deformation_map.txt -out output_
 }}}
 
 From the command line, this can all be scripted. The process for doing deformable registration with two CT images and resampling the corresponding functional (PET/SPECT) images is:
-#Null Deformation of fixed CT
-#Resample fixed SPECT to CT dimensions
-#Rigid registration of moving CT to fixed CT
-#Deformable registration of moving CT to fixed CT
-#Warp moving SPECT to fixed CT
+# Null Deformation of fixed CT
+# Resample fixed SPECT to CT dimensions
+# Rigid registration of moving CT to fixed CT
+# Deformable registration of moving CT to fixed CT
+# Warp moving SPECT to fixed CT
 
 For example a script to do this in unix might be:
 
