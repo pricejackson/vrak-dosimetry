@@ -21,4 +21,42 @@ Transformix, used for warping functional images, is called similarly:
 transformix -in moving_functional_image.dcm -tp deformation_map.txt -out output_folder/
 }}}
 
-Here is the workflow for coregistering 3 SPECT/CT volumes:
+From the command line, this can all be scripted. The process for doing deformable registration with two CT images and resampling the corresponding functional (PET/SPECT) images is:
+#Null Deformation of fixed CT
+#Resample fixed SPECT to CT dimensions
+#Rigid registration of moving CT to fixed CT
+#Deformable registration of moving CT to fixed CT
+#Warp moving SPECT to fixed CT
+
+For example a script to do this in unix might be:
+
+{{{
+#create output folder
+mkdir CT1
+
+#run elastix with 0 iterations to create a null deformation map (for resampling SPECT1 to correct dimensions)
+elastix -f CT1.dcm -m CT1.dcm -out CT1/ -p null_deform.txt
+
+#create output folder for resampled SPECT1
+mkdir SPECT1
+
+#resample SPECT with CT1 (fixed volume) dimensions
+transformix -in SPECT1.dcm -tp CT1/TransformParameters.0.txt -out SPECT1/
+
+
+
+
+#rigid registration CT2
+mkdir CT2rigid
+elastix -f CT1.dcm -m CT2.dcm -out CT2rigid/ -p rigid_param.txt
+
+#deformable registration CT2
+mkdir CT2
+#call deformable registration routine with using initial rigid registration (t0). Note: rigid registration is automatically written into deformation map
+elastix -f CT1.dcm -m CT2.dcm -out CT2/ -p def_param.txt -t0 CT2rigid/TransformParameters.0.txt
+
+#Warp SPECT #2 to fixed CT (CT1)
+mkdir SPECT2
+transformix -in SPECT2.dcm -tp CT2/TransformParameters.0.txt -out SPECT2/
+
+}}}
