@@ -1,0 +1,24 @@
+#Summary of Elastix Image registration
+
+= Introduction =
+
+This has currently been developed using Elastix to perform sequential rigid and deformable registration. In my experience the registration results are good and most importantly free from artefacts. From a workflow perspective, it is a very convenient software package because it allows warping of SPECT/PET volumes based on CT registration and the output images are all written with the same voxel dimensions and origin location. That avoids the need to do any further resampling before the kinetics processing. Registered images are written in ITK format [http://www.itk.org/Wiki/ITK/File_Formats mhd+raw]. You may prefer to use another registration package (plastimatch or ITK itself, for example) as long as the output is .mhd/.raw files in the same array space.
+
+ 
+
+
+= Details =
+
+Elastix is called from the command line with arguments of fixed & moving image paths and the location of a text file containing the registration parameters (Type, optimisation, metric, resolution, output filetype, etc).
+
+{{{
+elastix -f fixed_image.dcm -m moving_image.dcm -out output_folder/ -p parameter_file.txt
+}}}
+
+Transformix, used for warping functional images, is called similarly:
+
+{{{
+transformix -in moving_functional_image.dcm -tp deformation_map.txt -out output_folder/
+}}}
+
+Here is the workflow for coregistering 3 SPECT/CT volumes:
