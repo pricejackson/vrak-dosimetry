@@ -1,0 +1,12 @@
+#Sample Text file used for VRAK input
+
+= Introduction =
+
+VRAK input files are read as lines of python code. Stylistically this is asking for a variable to be defined and assigned as a string.
+Example:
+{{{
+image1='/path/to/image1.mhd'
+}}}
+This is where the user will define the path to input and output files along with the image time (in hours post-injection)
+
+
