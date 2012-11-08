@@ -63,30 +63,24 @@ transformix -in SPECT2.dcm -tp CT2/TransformParameters.0.txt -out SPECT2/
 Or in windows:
 
 {{{
-#create output folder
+
 mkdir CT1
 
-#run elastix with 0 iterations to create a null deformation map (for resampling SPECT1 to correct dimensions)
 elastix.exe -f CT1.dcm -m CT1.dcm -out CT1/ -p null_deform.txt
 
-#create output folder for resampled SPECT1
 mkdir SPECT1
 
-#resample SPECT with CT1 (fixed volume) dimensions
 transformix.exe -in SPECT1.dcm -tp CT1/TransformParameters.0.txt -out SPECT1/
 
 
 
-#rigid registration CT2
 mkdir CT2rigid
 elastix.exe -f CT1.dcm -m CT2.dcm -out CT2rigid/ -p rigid_param.txt
 
-#deformable registration CT2
+
 mkdir CT2
-#call deformable registration routine with using initial rigid registration (t0). Note: rigid registration is automatically written into deformation map
 elastix.exe -f CT1.dcm -m CT2.dcm -out CT2/ -p def_param.txt -t0 CT2rigid/TransformParameters.0.txt
 
-#Warp SPECT #2 to fixed CT (CT1)
 mkdir SPECT2
 transformix.exe -in SPECT2.dcm -tp CT2/TransformParameters.0.txt -out SPECT2/
 
@@ -97,7 +91,7 @@ transformix.exe -in SPECT2.dcm -tp CT2/TransformParameters.0.txt -out SPECT2/
 Note: sample parameter files null_deform.txt, rigid_param.txt, & def_param.txt are contained in the [http://code.google.com/p/vrak-dosimetry/downloads/list downloads] section
 
 output will be written to CT1/result.mhd, CT1/result.raw, etc. 
-If renaming, be sure to change the 'ElementDataFile' flag in the .mhd metafile:
+If renaming, be sure to change the 'ElementDataFile' flag in the .mhd metafile (can be done with a text editor):
 {{{
 ElementDataFile = newname.raw
 }}}
