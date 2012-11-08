@@ -1,4 +1,3 @@
-#Summary of Elastix Image registration
 
 = Introduction =
 
