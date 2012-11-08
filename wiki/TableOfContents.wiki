@@ -1,6 +1,5 @@
-#TableOfContents
 
-  * HomePage
+
+  * [HomePage Home]
   * ImageRegistration
   * KineticsProcessing
-  * SampleInputFile
