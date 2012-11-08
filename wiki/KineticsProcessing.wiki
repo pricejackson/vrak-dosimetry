@@ -2,9 +2,33 @@
 
 = Introduction =
 
-VRAK imports serial functional images as matrices and iterates through image volumes voxel-by-voxel with a 2- or 3-phase exponential pharmacokinetic curve fitting routine. 
+VRAK imports serial functional images as matrices and iterates through image volumes voxel-by-voxel with a 2- or 3-phase exponential pharmacokinetic curve fitting routine. In this initial build, output is given as a cumulated activity image where voxel intensity represents the quantity of disintigrations per unit volume (as Bq*hours/mL; assuming input images are correctly quantified in units Bq/mL)
 
+Prerequisites:
+[http://www.python.org/download/releases/2.7/ python 2.7]
+[http://www.scipy.org/Download numpy]
 
 = Details =
 
-# Images are decay-corrected to yield a measure of biological concentration (proportional to percent injected dose) per voxel. Decay correction factors must be supplied in the input text file [image time post-injection, physical half-life].
+Software will process either 2- or 3-timepoint serial PET or quantitative SPECT images. Co-registered images (see [ImageRegistration Elastix Image Registration] section should be written in .mhd/.raw filetype. VRAK is called from the command line requiriing only the path to input images, isotope half-life (in hours), and output path (for image volume and optionally NumPy array of fit parameters).
+
+{{{
+usage: VRAK_1.py [-h] -halflife HALFLIFE -t1 T1 -t2 T2 [-t3 T3] -im1 IM1 -im2
+                 IM2 [-im3 IM3] [-k_out K_OUT] -act ACT_OUT
+
+VRAK nuclear medicine kinetics and dosimetry software
+
+optional arguments:
+  -h, --help          show this help message and exit
+  -halflife HALFLIFE  Physical halflife of radionuclide in hours (ie
+                      Lu-177=161.04)
+  -t1 T1              image #1 time post-injection (in hours)
+  -t2 T2              image #2 time post-injection (in hours)
+  -t3 T3              [optional] image #3 time post-injection (in hours)
+  -im1 IM1            path to registered PET/SPECT image #1 .mhd
+  -im2 IM2            path to registered PET/SPECT image #2 .mhd
+  -im3 IM3            [optional] path to registered PET/SPECT image #3 .mhd
+  -k_out K_OUT        path for output (.npy) NumPy kinetics array [z,y,x,p]
+                      p=4/6 (depending on 2 or 3 image input)
+  -act ACT_OUT        output cumulated activity image volume (.mhd)
+}}}
