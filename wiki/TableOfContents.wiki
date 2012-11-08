@@ -1,3 +1,6 @@
   * [HomePage Home]
       * [ImageRegistration Using Elastix Image Registration]
       * [KineticsProcessing Running VRAK]
+      * [FlowChart Software Flow Chart]
+          * [FitFunction Curve Solver]
+    
