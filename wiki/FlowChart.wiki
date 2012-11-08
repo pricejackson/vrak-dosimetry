@@ -1,0 +1,25 @@
+#summary Logical Flow Chart of a VRAK call
+
+= Introduction =
+
+Running this software requires two command-line calls:
+  * Elastix Registration
+  * VRAK command
+
+Elastix takes care of registering images and essentially converting to aligned numerical arrays (really the bulk of the hard work)
+VRAK processes the image arrays and integrates the number of disintigrations for each voxel:
+  * Open image data as numpy matrices
+  * zero 'low-activity' voxels
+  * decay-correct based on time post-injection and physical halflife
+  * iterate through volume with curve fitting routine
+  * integrate # of decays based on physical half-life
+  * write output image volume (& optionally kinetics array)
+
+http://vrak-dosimetry.googlecode.com/files/flowchart_image.png
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
