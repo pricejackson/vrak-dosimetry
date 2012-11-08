@@ -1,4 +1,3 @@
-
   * [HomePage Home]
-      * [ImageRegistration Image Registration]
-      * [KineticsProcessing Kinetics Processing]
+      * [ImageRegistration Using Elastix Image Registration]
+      * [KineticsProcessing Running VRAK]
