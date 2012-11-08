@@ -1,5 +1,4 @@
 
-
   * [HomePage Home]
-  * ImageRegistration
-  * KineticsProcessing
+      * [ImageRegistration Image Registration]
+      * [KineticsProcessing Kinetics Processing]
