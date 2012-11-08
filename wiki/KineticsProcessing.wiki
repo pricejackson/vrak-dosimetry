@@ -13,7 +13,7 @@ Prerequisites:
 Software will process either 2- or 3-timepoint serial PET or quantitative SPECT images. Co-registered images (see [ImageRegistration Elastix Image Registration] section should be written in .mhd/.raw filetype. VRAK is called from the command line requiriing only the path to input images, isotope half-life (in hours), and output path (for image volume and optionally NumPy array of fit parameters).
 
 {{{
-usage: VRAK_1.py [-h] -halflife HALFLIFE -t1 T1 -t2 T2 [-t3 T3] -im1 IM1 -im2
+usage: VRAK.py [-h] -halflife HALFLIFE -t1 T1 -t2 T2 [-t3 T3] -im1 IM1 -im2
                  IM2 [-im3 IM3] [-k_out K_OUT] -act ACT_OUT
 
 VRAK nuclear medicine kinetics and dosimetry software
@@ -28,7 +28,18 @@ optional arguments:
   -im1 IM1            path to registered PET/SPECT image #1 .mhd
   -im2 IM2            path to registered PET/SPECT image #2 .mhd
   -im3 IM3            [optional] path to registered PET/SPECT image #3 .mhd
-  -k_out K_OUT        path for output (.npy) NumPy kinetics array [z,y,x,p]
+  -k_out K_OUT        [optional]path for output (.npy) NumPy kinetics array [z,y,x,p]
                       p=4/6 (depending on 2 or 3 image input)
   -act ACT_OUT        output cumulated activity image volume (.mhd)
 }}}
+
+
+For example:
+
+{{{
+VRAK.py -halflife 161.04 -t1 4 -t2 48 -im1 image1.mhd -im2 image2.mhd -k_out kinetics.npy -act im_out.mhd
+}}}
+
+Would run VRAK using two coregistered images (image1.mhd & image2.mhd) acquired at 4 and 24 hours for an isotope with 161 hour half-life (Lu-177). The output image (im_out.mhd + im_out.raw) contains an estimate of the number of disintigrations in each voxel using the interpolated 2-phase biexponential (1 uptake + 1 clearance) pharmacokinetics. The fit parameters for each voxel are saved in a numpy array (kinetics.npy) that can be used for making a video of interpolated uptake and clearance (to be added sometime after the initial release) or simply loaded into the Python IDLE for manual data analysis.
+
+If 3 images and timepoints are supplied at runtime, a 3-phase tri-exponential curve is fit for each voxel (1 uptake + 2 clearance)
