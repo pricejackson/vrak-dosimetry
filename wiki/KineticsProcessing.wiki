@@ -40,6 +40,8 @@ For example:
 VRAK.py -halflife 161.04 -t1 4 -t2 48 -im1 image1.mhd -im2 image2.mhd -k_out kinetics.npy -act im_out.mhd
 }}}
 
-would run VRAK using two coregistered images (image1.mhd & image2.mhd) acquired at 4 and 48 hours for an isotope with 161 hour half-life (Lu-177). The output image (im_out.mhd + im_out.raw) contains an estimate of the number of disintigrations in each voxel using the interpolated 2-phase biexponential (1 uptake + 1 clearance) pharmacokinetics. The fit parameters for each voxel are saved in a numpy array (kinetics.npy) that can be used for making a video of interpolated uptake and clearance (to be added sometime after the initial release) or simply loaded into the Python IDLE for manual data analysis.
+would run VRAK using two coregistered images (image1.mhd & image2.mhd) acquired at 4 and 48 hours for an isotope with 161 hour half-life (Lu-177). The output image (im_out.mhd + im_out.raw) contains an estimate of the number of disintigrations in each voxel using the interpolated 2-phase biexponential (1 uptake + 1 clearance) pharmacokinetics. Optionally, the fit parameters for each voxel are saved in a numpy array (kinetics.npy). That array can be loaded into the Python IDLE for manual data analysis or used to make a video slide show of interpolated activity (though not yet available in the general release). Be warned, kinetics files can be quite large (1-2 Gb).
 
-If 3 images and timepoints are supplied at runtime, a 3-phase tri-exponential curve is fit for each voxel (1 uptake + 2 clearance)
+If 3 images and timepoints are supplied at runtime, VRAK will use a 3-phase tri-exponential fitting routine (1 uptake + 2 clearance). 
+
+This software was originally written for serial timepoints in the range of 4-72 hours and isotopes with half-lives of several days. It may be necessary to adjust the conditioning or bounds of the PK routine to suit other research scenarios.
