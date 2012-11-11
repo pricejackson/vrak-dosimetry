@@ -12,13 +12,12 @@ Elastix takes care of registering images and essentially converting to aligned n
   * decay-correct based on time post-injection and physical halflife
   * iterate through volume with curve fitting routine
   * integrate # of decays based on physical half-life
-  * write output image volume (& optionally kinetics array)
+  * write output cumulated activity image volume (& optionally kinetics array)
+At the moment, dose convolution would only be available for very specific isotopes and voxel dimensions. If radionuclide decay yields long-range particles, it may be necessary to create a new dose convolution kernel (via Monte Carlo). Otherwise, simple voxel S-values may suffice. A reasonable approach to this functionality will be adressed with future releases.
+  * Dose convolution (voxelized dose kernel)
+  * Write Output absorbed dose image volume
+Optional:
+  * Call VRAK_VID: visual output of interpolated kinetics for given tomographic slice (activity & cumulated activity)
+
 
 http://vrak-dosimetry.googlecode.com/files/flowchart_image.png
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
