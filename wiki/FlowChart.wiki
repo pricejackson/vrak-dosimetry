@@ -13,7 +13,7 @@ Elastix takes care of registering images and essentially converting to aligned n
   * iterate through volume with curve fitting routine
   * integrate # of decays based on physical half-life
   * write output cumulated activity image volume (& optionally kinetics array)
-At the moment, dose convolution would only be available for very specific isotopes and voxel dimensions. If radionuclide decay yields long-range particles, it may be necessary to create a new dose convolution kernel (via Monte Carlo). Otherwise, simple voxel S-values may suffice. A reasonable approach to this functionality will be adressed with future releases.
+At the moment, dose convolution would only be available for very specific isotopes and voxel dimensions. If radionuclide decay yields long-range particles, it may be necessary to create a new dose convolution kernel (via Monte Carlo). Otherwise, direct voxel S-values may suffice. A reasonable approach to this functionality will be adressed with future releases. 
   * Dose convolution (voxelized dose kernel)
   * Write Output absorbed dose image volume
 Optional:
