@@ -3,7 +3,7 @@ Wiki not online yet. To be updated with debut release.
 = Introduction =
 
 Functional image dosimetry...
-
+Note: VRAK was written for dosimetry for long-half-life, therapeutic isotopes where images in a span of days after treatment. It has not been tested for the short time span pharmacokinetics of diagnostic radionuclides (F-18, Ga-68).
 
 = Details =
 
