@@ -3,4 +3,5 @@
       * [KineticsProcessing Running VRAK]
       * [FlowChart Software Flow Chart]
           * [FitFunction Curve Solver]
+      * [LoadingImages3DSlicer Working with Images: 3D Slicer]
     
