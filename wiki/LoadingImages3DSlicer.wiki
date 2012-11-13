@@ -27,7 +27,7 @@ http://vrak-dosimetry.googlecode.com/files/Colour_LUT.png
 
 
 
-  * Load up both PET and CT volumes in the viewing window. To see the full viewing options you may have to click first on the small arrow (just left of the R shown below), and then on the double arrow just below that. From there you can choose the desired foreground & background volumes. Volume opacity (or mix) can also be adjusted on this pane.
+  * Load up both PET and CT volumes in the viewing window. To see the full viewing options you may have to click first on the small arrow (just left of the R shown below), and then on the double arrow just below that. From there you can choose the desired foreground & background volumes. Volume opacity (mix) is also adjusted here.
 http://vrak-dosimetry.googlecode.com/files/Overlay_fg_bg.png
 
 
