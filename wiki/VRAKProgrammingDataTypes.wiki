@@ -10,3 +10,10 @@ VRAK is written as a Python script. The program itself basically steps through t
 
 =NumPy arrays=
 A python class of n-dimensional matrices. Most mathematical operations are handled efficiently. Memory and casting is handled automatically. When image files are read into VRAK, data is stored as 3-dimensional {{{float}}} NumPy arrays using a version of Bing Jian's mhd_utils function.
+{{{
+import mhd_utils_2 as mu #Import class module
+data_array, meta_header = mu.load_raw_data_with_mhd(image.mhd) #read in meta header and image data
+dimensions= [int(i) for i in meta_header['DimSize'}.split()] #next 3 lines correct for 3D array
+dimensions.reverse()
+data_array=data_array.reshape(dimensions)
+}}}
