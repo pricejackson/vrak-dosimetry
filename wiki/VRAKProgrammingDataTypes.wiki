@@ -1,13 +1,12 @@
 #Guide to program syntax (for those interested in development)
 
 
-= Introduction =
+== Introduction ==
 
-VRAK is written as a (quite simple) Python script. The program itself basically steps through the code line-by-line to read the command line arguments, import the image files, and write the output files. Other than that there is a single 'for loop' to iterate voxel-by-voxel through the image processing. It is certainly not sophisticated code, and I'd wager that anyone who's spent time with Matlab could play around with it in a meaningful way. 
-
-
+VRAK is written as a Python script. The program itself basically steps through the code line-by-line to read the command line arguments, import the image files, and write the output files. Other than that there is a single 'for' loop to iterate voxel-by-voxel through the image processing and a few functions located in separate module (class) files. It is certainly not sophisticated code. It mainly involves manipulating image data numerical arrays. If you have spent any time scripting in Matlab, this type of programming should seem familiar.  
 
 
+== Details ==
 
-
-= Details =
+=NumPy arrays=
+A python class of n-dimensional matrices. Most mathematical operations are handled efficiently. Memory and casting is handled automatically. When image files are read into VRAK, data is stored as 3-dimensional {{{float}}} NumPy arrays using a version of Bing Jian's mhd_utils function.
