@@ -19,5 +19,7 @@ data_array=data_array.reshape(dimensions)
 }}}
 This can all be typed line-by-line into the python interpreter. To check that your data_array has the correct voxel dimensions use:
 {{{data_array.shape}}}
+
 would return
+
 {{{(z, y, x) # the dimensions of your input image volume}}}
