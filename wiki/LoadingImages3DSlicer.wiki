@@ -21,7 +21,7 @@ http://vrak-dosimetry.googlecode.com/files/open_dialog.png
 
 
 
-  * Images are loaded in grayscale by default. To use a colour look-up table for functional (PET/SPECT) images, select 'Volumes' in the Module dropdown list. In the volume Panel, select the appropriate active volume and choose a colour LUT from the dropdown.
+  * Images are loaded in grayscale by default. To use a colour look-up table for functional (PET/SPECT) images, select 'Volumes' in the Module dropdown list. Then in the volume Panel, select the appropriate active volume and choose a colour LUT from the dropdown.
 http://vrak-dosimetry.googlecode.com/files/Colour_LUT.png
 
 
