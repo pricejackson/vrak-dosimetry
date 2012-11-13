@@ -1,0 +1,12 @@
+#Guide to program syntax (for those interested in development)
+
+
+= Introduction =
+
+VRAK is written as a (quite simple) Python script. The program itself basically steps through the code line-by-line to read the command line arguments, import the image files, and write the output files. Other than that there is a single 'for loop' to iterate voxel-by-voxel through the image processing. It is certainly not sophisticated code, and I'd wager that anyone who's spent time with Matlab could play around with it in a meaningful way.
+
+
+
+
+= Details =
+
