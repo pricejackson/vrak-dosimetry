@@ -10,16 +10,16 @@ Here is a brief guide to loading up the .mhd/.raw output images produced by VRAK
 = Details =
 
   # Click 'Add Data': Either in file menu or on toolbar
-http://vrak-dosimetry.googlecode.com/files/add_data.bmp
+ http://vrak-dosimetry.googlecode.com/files/add_data.bmp
 
   # Select 'Choose File(s) to Add' and select the appropriate .mhd file in the dialog that appears.
-http://vrak-dosimetry.googlecode.com/files/open_dialog.bmp
+ http://vrak-dosimetry.googlecode.com/files/open_dialog.bmp
 
   # Images are loaded in grayscale by default. To use a colour look-up table for functional (PET/SPECT) images, select 'Volumes' in the Module dropdown list. In the volume Panel, select the appropriate active volume and choose a colour LUT from the dropdown.
-http://vrak-dosimetry.googlecode.com/files/Colour_LUT.bmp
+ http://vrak-dosimetry.googlecode.com/files/Colour_LUT.bmp
 
   # Load up both PET and CT volumes in the viewing window. To see the full viewing options you may have to click first on the small arrow (just left of the R shown below), and then on the double arrow just below that. From there you can choose the desired foreground & background volumes. Volume opacity (or mix) can also be adjusted on this pane.
-http://vrak-dosimetry.googlecode.com/files/Overlay_fg_bg.bmp
+ http://vrak-dosimetry.googlecode.com/files/Overlay_fg_bg.bmp
 
 There you have it, your images should be ready to view.
 More detailed Slicer tutorials are available [http://www.slicer.org/slicerWiki/index.php/Documentation/4.0/Training#Introduction:_Slicer_4.0_Tutorials here] and [http://www.slicer.org/slicerWiki/index.php/Slicer_3.6:Training here].
