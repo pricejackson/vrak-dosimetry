@@ -1,4 +1,4 @@
-Wiki not online yet. To be updated with debut release.
+
 
 = Introduction =
 
@@ -7,10 +7,7 @@ Note: VRAK was written for dosimetry for long-half-life, therapeutic isotopes wh
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Instructions for installing and running VRAK (along with Elastix for registration are contained here). Click through the table of contents on the left for more information... 
 
 
 mhd_utils (functions for importing and writing mhd/raw files) is adapted from Bing Jian's module in [http://code.google.com/p/diffusion-mri/ diffusion-mri] 
