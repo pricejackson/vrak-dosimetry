@@ -1,0 +1,14 @@
+#Installation instructions
+
+= Installation =
+
+VRAK is executed as a high-level script relying on Python and the mathematical backend NumPy. As a python program, it does not require any particular installation and should run on any type of system as long as these dependencies are present. You will first need to register your images and output the files as .mhd/.raw files (meta+data). Instructions for doing this with Elastix are provided [http://code.google.com/p/vrak-dosimetry/wiki/ImageRegistration here].
+
+I recommend [http://www.python.org/download/releases/2.7/ Python v2.7], [http://sourceforge.net/projects/numpy/files/ Numpy 1.6], and [http://elastix.isi.uu.nl/index.php Elastix 4.6]. Follow installation instructions for each package.
+
+Once python installed, go into your VRAK folder and call the program either with: 
+{{{python VRAK_1.py [command line arguments]}}}
+or simply
+{{{VRAK_1.py [command line arguments]}}}
+
+For more instructions on running VRAK check [http://code.google.com/p/vrak-dosimetry/wiki/KineticsProcessing here]
