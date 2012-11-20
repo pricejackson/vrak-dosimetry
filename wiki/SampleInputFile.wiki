@@ -1,3 +1,4 @@
+#labels Deprecated
 #Sample Text file used for VRAK input
 
 = Introduction =
