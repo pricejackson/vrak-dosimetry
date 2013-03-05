@@ -3,7 +3,7 @@
 = Installation =
 
 
-VRAK is executed as a high-level Python script with the mathematical backend NumPy. Windows users can download an *.exe version that includes all the Python dependencies. Linux users or anyone wanting to use the source version will need Python 2.7, NumPy, SciPy and PyQt4 (links on the homepage). 
+VRAK is executed as a high-level Python script with the mathematical backend NumPy. Windows users can download an .exe version that includes all the Python dependencies. Linux users or anyone wanting to use the source version will need Python 2.7, NumPy, SciPy and PyQt4 (links on the homepage). 
 To check whether these are already installed, open the python interpreter and try the command:
 {{{
 import numpy, scipy, PyQt4
