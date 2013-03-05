@@ -20,4 +20,6 @@ Once everything has been downloaded, load up VRAK and set the paths to the Elast
   * Run VRAK.exe, VRAK, or VRAK.py (depending on your distribution)
   * On first run, click on 'configure' tab, find the paths for Elastix and Transformix & click save
 
+https://vrak-dosimetry.googlecode.com/files/vrk_config.jpg
+
 last edited 5 March 2013
