@@ -11,6 +11,6 @@
       * [LoadingImages3DSlicer Working with Images: 3D Slicer]
       * [FlowChart Software Flow Chart]
           * [FitFunction Curve Solver]
-depricated...
+Old Pages...
       * [ImageRegistration Manually Running Elastix]
-      * [KineticsProcessing Running Depricated Versions]
+      * [KineticsProcessing Running Deprecated Versions]
