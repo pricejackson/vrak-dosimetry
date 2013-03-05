@@ -1,7 +1,6 @@
   * [HomePage Home]
       * [Installation Installation]
-      * [FlowChart Software Flow Chart]
-          * [FitFunction Curve Solver]
+
       * [VRAKTabs Program Tabs]
           * [About About]
           * [CoReg Co-Register Images]
@@ -10,5 +9,7 @@
           * [ProcessDose Process Dose]
           * [Config Configure]
       * [LoadingImages3DSlicer Working with Images: 3D Slicer]
+      * [FlowChart Software Flow Chart]
+          * [FitFunction Curve Solver]
       * [ImageRegistration Manually Running Elastix]
       * [KineticsProcessing Running Depricated Versions]
