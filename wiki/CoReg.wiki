@@ -8,5 +8,6 @@ Batch image registration and warping is one of the main functionalities of VRAK.
   * Warp Fused SPECT/PET images
   * Resample SPECT/PET images to 5mm cubic voxels (as mhd+raw filetype)
   * Rename images to user-selected values (mhd+raw files & 'ElementDataFile' flag in mhd header)
+  * Autopopulates image paths in the _Dosimetry Input_ tab
 
 https://vrak-dosimetry.googlecode.com/files/vrk_coreg.jpg
