@@ -1,0 +1,12 @@
+#Tab for batch Running Elastix
+
+=Registration Tab=
+
+Batch image registration and warping is one of the main functionalities of VRAK. Elastix/Transformix is the command-line program that does all the leg work. However it can be quite time-consuming when used to manually align and resample fused PET/CT or SPECT/CT images (particularly to the novice user). The VRAK batch registration takes care of the following steps:
+  * Rigidly Register CT images
+  * Deformably Register CT images
+  * Warp Fused SPECT/PET images
+  * Resample SPECT/PET images to 5mm cubic voxels (as mhd+raw filetype)
+  * Rename images to user-selected values (mhd+raw files & 'ElementDataFile' flag in mhd header)
+
+https://vrak-dosimetry.googlecode.com/files/vrk_coreg.jpg
