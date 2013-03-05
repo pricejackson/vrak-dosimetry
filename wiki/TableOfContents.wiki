@@ -1,8 +1,8 @@
   * [HomePage Home]
       * [Installation Installation]
-      * [ImageRegistration Using Elastix Image Registration]
-      * [KineticsProcessing Running VRAK]
       * [FlowChart Software Flow Chart]
           * [FitFunction Curve Solver]
+
       * [LoadingImages3DSlicer Working with Images: 3D Slicer]
-    
+      * [ImageRegistration Manually Running Elastix]
+      * [KineticsProcessing Running Depricated Versions]
