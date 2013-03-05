@@ -3,17 +3,21 @@
 = Installation =
 
 
-7 Jan 2013:
-VRAK is now also distributed as a windows executable. It should not require users to download Python or Numpy. To run VRAK from source, however, read on...
+VRAK is executed as a high-level Python script with the mathematical backend NumPy. Windows users can download an *.exe version that includes all the Python dependencies. Linux users or anyone wanting to use the source version will need Python 2.7, NumPy, SciPy and PyQt4 (links on the homepage). 
+To check whether these are already installed, open the python interpreter and try the command:
+{{{
+import numpy, scipy, PyQt4
+}}}
+If there are no errors, VRAK should run without any further installation.
 
 
-VRAK is executed as a high-level script relying on Python and the mathematical backend NumPy. As a python program, it is automatically compiled for your machine at runtime. It should run without installation as long as Python and NumPy are present. You will first need to register your images and output the files as .mhd/.raw files (meta+data). Instructions for doing this with Elastix are provided [http://code.google.com/p/vrak-dosimetry/wiki/ImageRegistration here].
+Everyone will need to download Elastix to perform image registration and resampling.
+Once everything has been downloaded, load up VRAK and set the paths to the Elastix and Transformix executables on the 'Configure' tab.
 
-I recommend [http://www.python.org/download/releases/2.7/ Python v2.7], [http://sourceforge.net/projects/numpy/files/ Numpy 1.6], and [http://elastix.isi.uu.nl/index.php Elastix 4.6]. Follow installation instructions for each package.
+  *Download & extract Elastix (Binaries should be fine, don't need to compile from source)
+  *Download Python 2.7, NumPy, PyQt4 (if necessary)
+  *Extract VRAK to a desired location
+  *Run VRAK.exe, VRAK, or VRAK.py (depending on your distribution)
+  *On first run, click on 'configure' tab, find the paths for Elastix and Transformix & click save
 
-Once python installed, go into your VRAK folder and call the program either with: 
-{{{python VRAK_1.py [command line arguments]}}}
-or simply
-{{{VRAK_1.py [command line arguments]}}}
-
-For more instructions on running VRAK check [http://code.google.com/p/vrak-dosimetry/wiki/KineticsProcessing here]
+last edited 5 March 2013
