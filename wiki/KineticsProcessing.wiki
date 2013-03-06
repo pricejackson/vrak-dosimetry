@@ -1,5 +1,3 @@
-#labels Featured
-
 = Introduction =
 
 VRAK imports serial functional images as matrices and iterates through image volumes voxel-by-voxel with a 2- or 3-phase exponential pharmacokinetic curve fitting routine. In this initial build, output is given as a cumulated activity image where voxel intensity represents the quantity of disintigrations per unit volume (as Bq*hours/mL; assuming input images are correctly quantified in units Bq/mL)
