@@ -5,3 +5,5 @@ This tab selects all of the input data for processing kinetics and dosimetry. He
 You must input the time post-injection of each image. The *imaging isotope* box is used for decay-correcting the images prior to kinetics fitting. The *Dosimetry Isotope* box is used for integrating cumulated activity and then convolving dose with VSVs.
 
 The software was calibrated for long half-life therapeutic isotopes. There are some assumptions to the curve-fitting routine that prevent overestimation of dose by limiting the rate constant of the uptake phase. It may not be appropriate to apply these assumptions to short half-life isotopes.
+
+https://vrak-dosimetry.googlecode.com/files/vrk_doseInput.jpg
