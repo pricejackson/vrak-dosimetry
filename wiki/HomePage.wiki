@@ -1,5 +1,4 @@
 #labels Featured
-
 VRAK is a computer program that will iterate through serial PET or Nuclear Medicine images, calculating time activity curves in each voxel. From these estimates it is possible to deduce the number of disintigrations and radiation absorbed dose. VRAK was written for dosimetry of long half-life isotopes (Y-90, Lu-177). It uses 5mm Voxel S-Values calculated with [http://www.opengatecollaboration.org/ GATE] to convolve voxel self dose and dose to neighbours over a range of 10cm.
 
 
@@ -10,4 +9,4 @@ Check the installation page for brief instructions on setting up the program. Pe
 
 
 
-I would like to give credit to Bing Jian for writing _mhd_utils_ (functions for importing and writing mhd/raw files) in [http://code.google.com/p/diffusion-mri/ diffusion-mri] 
+Credit goes to Bing Jian for writing _mhd_utils_ (functions for importing and writing mhd/raw files) in [http://code.google.com/p/diffusion-mri/ diffusion-mri] 
