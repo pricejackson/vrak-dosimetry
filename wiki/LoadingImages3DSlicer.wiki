@@ -2,7 +2,7 @@
 
 = Introduction =
 
-[http://www.slicer.org/ 3D Slicer] is a robust medical image viewing program. It's not always the most intuitive, but its free, handles most any medical image format, and comes with a slew of plugins that may be helpful depending on your application. Just as an aside, large image sets may load and scroll slowly on computers without a dedicated graphics card.
+[http://www.slicer.org/ 3D Slicer] is a robust medical image viewing program. It's not always the most intuitive, but its open-source, handles most any medical image format, and comes with a slew of plugins that may be helpful depending on your application. Just as an aside, large image sets may load and scroll slowly on computers without a dedicated graphics card.
 
 Here is a brief guide to loading up the .mhd/.raw output images produced by VRAK:
 
