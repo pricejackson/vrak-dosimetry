@@ -10,4 +10,6 @@ Batch image registration and warping is one of the helpful functionalities of VR
   * Rename images to user-selected values (mhd+raw files & edit _'ElementDataFile'_ flag in mhd header)
   * Autopopulates image paths in the _Dosimetry Input_ tab
 
+Co-registration of 3 image volumes can require a lot of processing time. Don't be surprised if it takes an hour or more.
+
 https://vrak-dosimetry.googlecode.com/files/vrk_coreg.jpg
