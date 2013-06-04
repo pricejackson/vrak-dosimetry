@@ -21,3 +21,4 @@ Optional:
 
 
 http://vrak-dosimetry.googlecode.com/files/flowchart_image.png
+Note: Dose convolution is now functional (I just haven't updated the flow chart)
